@@ -12,9 +12,9 @@ function myPlugin() {
         if (resolve instanceof Promise) {
           resolve.then((moduleId) => {
             if (moduleId) {
-              context.getModuleInfo(moduleId as string);
+              // context.getModuleInfo(moduleId as string);
             }
-          })
+          }).catch(err => console.error(err));
         } else {
           console.log(resolve);
         }
@@ -38,8 +38,17 @@ function myPlugin() {
       }
       return new Promise((resolve, reject) => {
         const newCode = transformImport(this.parse(code, null), id, this);
-        return code;
+        return resolve(code);
       });
+    },
+    generateBundle(options: OutputOptions, bundle: OutputBundle, isWrite: boolean) {
+      // console.log(bundle);
+    },
+    renderChunk(code: string,
+      chunk: RenderedChunk,
+      options: OutputOptions) {
+        console.log(chunk);
+        return null;
     },
   };
 
