@@ -1,0 +1,36 @@
+{
+  "name": "rollup-web-webworkify-plugin",
+  "version": "0.1.0",
+  "description": "launch a web worker at runtime that can auto switch worker or main process with rollup",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch",
+    "test": "jest"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "web-worker"
+  ],
+  "author": "idler.zhu <zqc.sunny@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-typescript": "^5.0.1",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "rollup-pluginutils": "^2.5.0",
+    "typescript": "^3.3.4000"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "jest",
+      "git add"
+    ]
+  }
+}
