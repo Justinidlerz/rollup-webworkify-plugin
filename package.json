@@ -1,8 +1,8 @@
 {
-  "name": "rollup-web-webworkify-plugin",
+  "name": "rollup-webworkify-plugin",
   "version": "0.1.0",
   "description": "launch a web worker at runtime that can auto switch worker or main process with rollup",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "gulp",
     "dev": "gulp watch",
@@ -16,6 +16,8 @@
   "author": "idler.zhu <zqc.sunny@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^11.11.5",
+    "@types/typescript": "^2.0.0",
     "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1",
     "gulp-typescript": "^5.0.1",
@@ -32,5 +34,8 @@
       "jest",
       "git add"
     ]
+  },
+  "dependencies": {
+    "@types/rollup": "^0.54.0"
   }
 }

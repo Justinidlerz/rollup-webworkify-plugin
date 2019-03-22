@@ -1,10 +1,6 @@
 .DS_Store
 node_modules
-bundle
-
-/tests/e2e/reports/
-selenium-debug.log
-
+build
 # local env files
 .env.local
 .env.*.local
